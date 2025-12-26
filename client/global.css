@@ -1,0 +1,144 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme - Black & Gold Portfolio
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Dark background */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    /* Card backgrounds - slightly lighter than main background */
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    /* Popover */
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Gold */
+    --primary: 45 87% 55%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Secondary - Dark gray/black */
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Muted - Medium gray */
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 70%;
+
+    /* Accent - Gold accent */
+    --accent: 45 87% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    /* Destructive - Red warning */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    /* Borders and inputs */
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 45 87% 55%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 87% 55%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 87% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 87% 55%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 45 87% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 45 87% 55%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 87% 55%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 87% 55%;
+  }
+}
+
+@layer utilities {
+  .gold-glow {
+    @apply shadow-gold-glow;
+  }
+
+  .gold-glow-lg {
+    @apply shadow-gold-glow-lg;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+}
